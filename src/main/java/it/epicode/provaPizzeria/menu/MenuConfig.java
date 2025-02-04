@@ -21,7 +21,7 @@ public class MenuConfig {
     private Pizza pizzaMargherita;
 
     @Bean
-    public Menu nuovoMenu(){
+    public Menu menuNuovo(){
         Menu menuNuovo = new Menu();
         menuNuovo.setPizza(pizzaFunghi);
         menuNuovo.setBevanda(aranciata);

@@ -13,4 +13,12 @@ public class BevandaConfig {
         return b;
     }
 
+    @Bean
+    public Bevanda cocaCola () {
+        Bevanda b = new Bevanda();
+        b.setNome("Coca Cola");
+        b.setPrezzo(2.50);
+        return b;
+    }
+
 }
