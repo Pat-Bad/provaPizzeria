@@ -10,7 +10,7 @@ public class TavoloConfig {
         Tavolo tavolo = new Tavolo();
         tavolo.setNumeroTavolo(1);
         tavolo.setNumeroCopertiMax(4);
-        tavolo.setOccupato(false);
+        tavolo.setOccupato(true);
         return tavolo;
     }
 }

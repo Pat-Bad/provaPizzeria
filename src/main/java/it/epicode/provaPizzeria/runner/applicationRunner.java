@@ -21,7 +21,7 @@ public class applicationRunner implements CommandLineRunner {
     private final Ordine ordine;
     private final Tavolo tavolo1;
     private final Ordine ordine1;
-   private final List<elementoMenu> elementiOrdinati = new ArrayList<>();
+    private final List<elementoMenu> elementiOrdinati = new ArrayList<>();
 
     @Override
     public void run(String... args) throws Exception {
@@ -29,8 +29,8 @@ public class applicationRunner implements CommandLineRunner {
         elementiOrdinati.add(menuNuovo.getPizza());
         elementiOrdinati.add(menuNuovo.getBevanda());
         ordine1.setElementiOrdinati(elementiOrdinati);
-       tavolo1.setOrdine(ordine1);
-        System.out.println(ordine1);
+        tavolo1.setOrdine(ordine1);
+        System.out.println(tavolo1);
 
 
     }
