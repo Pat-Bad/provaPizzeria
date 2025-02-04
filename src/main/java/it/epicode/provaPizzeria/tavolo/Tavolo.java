@@ -12,5 +12,4 @@ public class Tavolo {
     private int numeroTavolo;
     private int numeroCopertiMax;
     private boolean occupato;
-    private Ordine ordine;
 }
