@@ -1,11 +1,9 @@
 package it.epicode.provaPizzeria.bevande;
 
-import it.epicode.provaPizzeria.calcoloPrezzi.elementoMenu;
+import it.epicode.provaPizzeria.menu.elementoMenu;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 @Data
 @AllArgsConstructor
@@ -16,7 +14,9 @@ public class Bevanda implements elementoMenu {
     private double prezzo;
 
     @Override
-    public double prezzoElemento() {
+    public double getPrezzo() {
         return prezzo;
     }
+    @Override
+    public String getNome(){return nome;}
 }

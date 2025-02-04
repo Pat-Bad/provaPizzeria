@@ -1,6 +1,6 @@
 package it.epicode.provaPizzeria.ordine;
 
-import it.epicode.provaPizzeria.calcoloPrezzi.elementoMenu;
+import it.epicode.provaPizzeria.menu.elementoMenu;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -16,7 +16,6 @@ public class OrdineConfig {
 
         Ordine ordine1 = new Ordine();
         ordine1.setNumeroOrdine(1);
-        ordine1.setStatoOrdine("In corso");
         ordine1.setNumeroCoperti(2);
         ordine1.setOraAcquisizione(Time.valueOf("14:42:00"));
 

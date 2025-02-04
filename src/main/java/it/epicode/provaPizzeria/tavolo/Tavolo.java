@@ -11,6 +11,6 @@ import lombok.NoArgsConstructor;
 public class Tavolo {
     private int numeroTavolo;
     private int numeroCopertiMax;
-    private Boolean occupato;
+    private boolean occupato;
     private Ordine ordine;
 }

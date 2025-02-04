@@ -1,8 +1,9 @@
 package it.epicode.provaPizzeria.runner;
 
-import it.epicode.provaPizzeria.calcoloPrezzi.elementoMenu;
+import it.epicode.provaPizzeria.menu.elementoMenu;
 import it.epicode.provaPizzeria.menu.Menu;
 import it.epicode.provaPizzeria.ordine.Ordine;
+import it.epicode.provaPizzeria.ordine.StatoOrdine;
 import it.epicode.provaPizzeria.tavolo.Tavolo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
@@ -18,19 +19,21 @@ import java.util.List;
 @PropertySource("application.properties")
 public class applicationRunner implements CommandLineRunner {
     private final Menu menuNuovo;
-    private final Ordine ordine;
-    private final Tavolo tavolo1;
-    private final Ordine ordine1;
-    private final List<elementoMenu> elementiOrdinati = new ArrayList<>();
 
     @Override
     public void run(String... args) throws Exception {
-        //System.out.println(menu);
-        elementiOrdinati.add(menuNuovo.getPizza());
-        elementiOrdinati.add(menuNuovo.getBevanda());
-        ordine1.setElementiOrdinati(elementiOrdinati);
-        tavolo1.setOrdine(ordine1);
-        System.out.println(tavolo1);
+        Ordine ordine2 = new Ordine();
+        ordine2.setNumeroOrdine(3);
+        ordine2.setStatoOrdine(StatoOrdine.IN_CORSO);
+        ordine2.setNumeroCoperti(2);
+        ordine2.setElementiOrdinati(List.of(
+                menuNuovo.getElementiMenu().get(0),
+                menuNuovo.getElementiMenu().get(0),
+                menuNuovo.getElementiMenu().get(2),
+                menuNuovo.getElementiMenu().get(3)));
+
+        ordine2.stampaOrdine();
+
 
 
     }

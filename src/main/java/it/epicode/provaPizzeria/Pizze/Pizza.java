@@ -1,6 +1,6 @@
 package it.epicode.provaPizzeria.Pizze;
 
-import it.epicode.provaPizzeria.calcoloPrezzi.elementoMenu;
+import it.epicode.provaPizzeria.menu.elementoMenu;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,7 +13,7 @@ public class Pizza implements elementoMenu {
     private double prezzo;
 
     @Override
-    public double prezzoElemento() {
+    public double getPrezzo() {
         return prezzo;
     }
 }
