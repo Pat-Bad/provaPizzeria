@@ -53,7 +53,7 @@ public class PizzaConfigTest {
             "Salame piccante, 10",
             "Vegetariana, 11.50"
     })
-    @DisplayName("test controllo corretto inserimento pizze")
+    @DisplayName("test controllo corretto inserimento pizze e stampa")
     public void testPizze(String nome, double prezzo) {
         Pizza p = new Pizza();
         p.setNome(nome);
@@ -71,7 +71,8 @@ public class PizzaConfigTest {
             "Birra, 5",
             "Acqua Tonica, 3.50"
     })
-    @DisplayName("test controllo corretto inserimento bevande")
+
+    @DisplayName("test controllo corretto inserimento bevande e stampa")
     public void testBevande(String nome, double prezzo) {
         Bevanda b = new Bevanda();
         b.setNome(nome);
@@ -81,7 +82,6 @@ public class PizzaConfigTest {
         b.stampa();
 
         assertNotNull("Coca Cola", b.getNome());
-
     }
 
 }
