@@ -1,17 +1,13 @@
 package it.epicode.provaPizzeria.runner;
 
-import it.epicode.provaPizzeria.menu.elementoMenu;
 import it.epicode.provaPizzeria.menu.Menu;
 import it.epicode.provaPizzeria.ordine.Ordine;
 import it.epicode.provaPizzeria.ordine.StatoOrdine;
 import it.epicode.provaPizzeria.tavolo.Tavolo;
 import lombok.RequiredArgsConstructor;
-import lombok.Value;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -38,8 +34,8 @@ public class applicationRunner implements CommandLineRunner {
                 menuNuovo.getElementiMenu().get(2),
                 menuNuovo.getElementiMenu().get(3)));
 
-        ordine2.stampaOrdine();
 
+        ordine2.stampaOrdine();
 
 
     }

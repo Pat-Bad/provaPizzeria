@@ -1,6 +1,7 @@
 package it.epicode.provaPizzeria.bevande;
 
 import it.epicode.provaPizzeria.menu.elementoMenu;
+import it.epicode.provaPizzeria.stampa.Printable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Bevanda implements elementoMenu {
+public class Bevanda implements elementoMenu, Printable {
 
     private String nome;
     private double prezzo;
@@ -17,6 +18,14 @@ public class Bevanda implements elementoMenu {
     public double getPrezzo() {
         return prezzo;
     }
+
     @Override
-    public String getNome(){return nome;}
+    public String getNome() {
+        return nome;
+    }
+
+    @Override
+    public String stampa() {
+        return "Bevanda " + nome + ", prezzo " + prezzo + "€";
+    }
 }
